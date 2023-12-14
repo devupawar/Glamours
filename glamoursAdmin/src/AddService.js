@@ -1,0 +1,81 @@
+import axios from 'axios'
+import React, { useState } from 'react'
+import { Button, Col, Form, FormControl, FormGroup, FormLabel, Row } from 'react-bootstrap'
+import Serviceimage from '../src/front-desk.png'
+import { useNavigate } from 'react-router-dom'
+
+
+const AddService = () => {
+    const [servicename, setServiceName] = useState("")
+    const [serviceprice, setServicePrice] = useState("")
+    const [servicetype, setServiceType] = useState("")
+    const [serviceImage, setServiceImage] = useState("")
+    const [serviceAvailable, setServiceAvailable] = useState("")
+
+    function SubmitForm() {
+        const Servicedata = {
+            ServiceName: servicename,
+            ServicePrice: serviceprice,
+            ServiceType: servicetype,
+            ServiceImage: serviceImage,
+            IsActive: serviceAvailable
+        }
+        PostService(Servicedata)
+    }
+
+    const PostService = (ServiceData) => {
+        axios.post("http://localhost:5000/api/addservice",ServiceData)
+            .then((result) => {
+                alert("SERVICE SAVED")
+            }).catch((err) => {
+                alert("ERR")
+            });
+    }
+    const navi = useNavigate()
+
+    return (
+        <div>
+            <container>
+                <h1 className='AShead'>Add Service</h1>
+
+                <Row>
+                    <Col lg="6" md="6" sm="12">
+                        <img className='asimg' src={Serviceimage}></img>
+                    </Col>
+                    <Col lg="6" md="6" sm="12" >
+                        <Form className='form'>
+
+                            <FormGroup className='formg '>
+                                <FormLabel>Service Name</FormLabel>
+                                <FormControl onChange={(e) => setServiceName(e.target.value)} type='text'></FormControl>
+                            </FormGroup>
+
+                            <FormGroup className='formg'>
+                                <FormLabel>Service Price</FormLabel>
+                                <FormControl onChange={(e) => setServicePrice(e.target.value)} type='number'></FormControl>
+                            </FormGroup>
+
+                            <FormGroup className='formg'>
+                                <FormLabel>Service Type</FormLabel>
+                                <FormControl onChange={(e) => setServiceType(e.target.value)} type='text'></FormControl>
+                            </FormGroup>
+
+                            <FormGroup className='formg'>
+                                <FormLabel>Service Image</FormLabel>
+                                <FormControl onChange={(e) => setServiceImage(e.target.value)} type='string'></FormControl>
+                            </FormGroup>
+
+                            <FormGroup className='formg'>
+                                <FormLabel>Available</FormLabel>
+                                <FormControl onChange={(e) => setServiceAvailable(e.target.value)} type='string'></FormControl>
+                            </FormGroup>
+                            <Button className='bt' onClick={() => SubmitForm()} >Add Service</Button>
+                            <Button className='btn' onClick={() => navi('/services')}>All services</Button>
+                        </Form>
+                    </Col>
+                </Row>
+            </container>
+        </div>
+    )
+}
+export default AddService

@@ -1,0 +1,36 @@
+.Navbar{
+  height: 100px;
+  font-size: 20px;
+  background-color: rgb(249, 124, 145);
+  cursor:pointer;
+}
+.routes{
+  text-decoration: none;
+  color:black;
+}
+.form{
+  margin-left: 600px;
+  margin-top: 100px;
+  margin-right: 600px;
+  border: 1px solid rgb(255, 0, 115);
+  border-radius: 20px ;
+}
+.bt{
+  background-color: rgb(255, 0, 115) !important;
+  margin-left: 110px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: rgb(255, 0, 115)!important;
+}
+.formg{
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.fhead{
+  margin-top: 20px;
+  color: rgb(255, 0, 115);
+  margin-left: 80px;
+}
+
+  

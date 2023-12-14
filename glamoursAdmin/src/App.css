@@ -1,0 +1,73 @@
+.Nav{
+    cursor: pointer;
+    height: 100px;
+    background-color: rgb(251, 128, 148);
+}
+.mlink{
+    text-decoration: none;
+    color: rgb(252, 12, 52);
+}
+.offhead{
+    font-size: 30px;
+}
+.form{
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-right: 150px;
+    border: 1px solid rgb(255, 0, 115);
+    border-radius: 20px ;
+  }
+  .formg{
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .bt{
+   border-color:rgb(255, 0, 115) !important ;
+    background-color: rgb(255, 0, 115) !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn{
+    border-color: rgb(255, 0, 115) !important;
+      background-color: rgb(255, 0, 115) !important;
+      margin-left: 90px;  
+     
+    }
+  
+  .asimg{
+    margin-top: 50px;
+    margin-left: 100px;
+    width: 650px;
+    height: 480px;
+  }
+  .shead{
+    margin-left: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(120, 6, 120);
+    font-family: icomoon !important;
+  }
+  .chead{
+    margin-left: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(120, 6, 120);
+    font-family: icomoon !important;
+  }
+  .custominfo{
+    margin-top: 30px;
+  }
+  .AShead{
+    margin-left: 600px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: rgb(120, 6, 120);
+    font-family: icomoon !important;
+  }
+  .lh{
+    
+    height: 100px;
+    fill:yellow;
+    stroke: blue;
+  }
