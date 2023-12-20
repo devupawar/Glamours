@@ -24,7 +24,7 @@ const AddService = () => {
     }
 
     const PostService = (ServiceData) => {
-        axios.post("http://localhost:5000/api/addservice",ServiceData)
+        axios.post("http://localhost:5000/api/addservice", ServiceData)
             .then((result) => {
                 alert("SERVICE SAVED")
             }).catch((err) => {
@@ -32,6 +32,22 @@ const AddService = () => {
             });
     }
     const navi = useNavigate()
+
+    async function handlechangeimage(e) {
+        const imgData = new FormData();
+        imgData.append(
+            'image',
+            e.target.files[0]
+        );
+        axios.post("http://localhost:5000/uploadfile", imgData)
+            .then((res) => {
+                console.log("Res : ", res.data);
+                setServiceImage(res.data.filepath)
+                alert("image Uploaded")
+            }).catch((err) => {
+                console.log("Err", err);
+            });
+    }
 
     return (
         <div>
@@ -62,7 +78,7 @@ const AddService = () => {
 
                             <FormGroup className='formg'>
                                 <FormLabel>Service Image</FormLabel>
-                                <FormControl onChange={(e) => setServiceImage(e.target.value)} type='string'></FormControl>
+                                <FormControl onChange={handlechangeimage} type='file'></FormControl>
                             </FormGroup>
 
                             <FormGroup className='formg'>

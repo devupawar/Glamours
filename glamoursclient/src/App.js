@@ -8,6 +8,7 @@ import Services from './Services';
 import Appointment from './Appointment';
 import Profile from './Profile';
 import Register from './Register';
+import Login from './Login';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Route path='/appointment' element={<Appointment/>}></Route>
       <Route path='/profile' element={<Profile/>}></Route>
       <Route path='/register' element={<Register/>}></Route>
+      <Route path='/login' element={<Login/>}></Route>
     </Routes>
     </BrowserRouter>
     </>

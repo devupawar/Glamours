@@ -34,12 +34,12 @@ const Services = () => {
     }).catch((err) => {
       
     });
-
   }
   const updateService=()=>{
     const sdata={
       sid:selectedServices._id,
-      ServicePrice:selectedServices.ServicePrice
+      ServicePrice:selectedServices.ServicePrice,
+      IsActive:selectedServices.IsActive
     }
     axios.post("http://localhost:5000/api/updateservice",sdata)
     .then((result) => {
@@ -58,16 +58,14 @@ const Services = () => {
         <Row>
          {
           serviceData.map((service)=>{
-            return(
-              
-              <Col lg='4' md="6" sm="12">
-                
-                <Card>
+            return(             
+              <Col lg='3' md="6" sm="12">              
+                <Card className='sinfo'>   
+                  <Card.Img className='cImg' src={`http://localhost:5000${service.ServiceImage}`}/>
                   <Card.Title>{service.ServiceName}</Card.Title>
                   <Card.Body>
                     <p>{service.ServicePrice}</p>
                     <p>{service.ServiceType}</p>
-                    <p>{service.ServiceImage}</p>
                     <p>{service.IsActive}</p>
                   </Card.Body>
                   <Card.Footer>
@@ -94,6 +92,10 @@ const Services = () => {
             <Form.Control type="text" value={selectedServices.ServicePrice}
             onChange={(e)=>setSelectedServices
             ({...selectedServices,ServicePrice:e.target.value})}>
+            </Form.Control>
+            <Form.Control type="text" value={selectedServices.IsActive}
+            onChange={(e)=>setSelectedServices
+            ({...selectedServices,IsActive:e.target.value})}>
             </Form.Control>
           </Form>
         </Modal.Body>
