@@ -58,3 +58,22 @@
   color: rgb(246, 36, 71);
   font-size: 1.5rem;
 }
+.Ppanel{
+  border: 2px solid black;
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-top: 150px;
+}
+.pdata{
+  margin-left: 70px;
+}
+.phead{
+  margin-left:130px;
+  color: rgb(79, 2, 16);
+}
+.pbt{
+  margin-left: 170px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: rgb(245, 17, 55) !important;
+}
