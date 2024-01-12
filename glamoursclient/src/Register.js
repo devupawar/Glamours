@@ -1,10 +1,8 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Button, Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
-  const navi=useNavigate()
    const[fullname,setfullName]=useState("")
    const[email,setemail]=useState("")
    const[mobile,setmobile]=useState("")
@@ -31,6 +29,7 @@ const Register = () => {
    }
      return (
     <div>
+
       <Form className='form'>
         <h1 className='fhead'>Sign In</h1>
       <FormGroup className='formg'>
@@ -49,16 +48,14 @@ const Register = () => {
         <FormLabel>Address</FormLabel>
         <FormControl onChange={(e)=>setaddress(e.target.value)} type='text' placeholder='eg.build no,street,city'></FormControl>
       </FormGroup>
-
       <FormGroup className='formg'>
         <FormLabel>Password</FormLabel>
         <FormControl onChange={(e)=>setPassword(e.target.value)} placeholder='********' type='password'></FormControl>
       </FormGroup>
-
       <Button onClick={()=>submitForm()} className='bt'>Submit</Button>
-      <p>Already Registered?<span onClick={()=>navi('/login')} className='navi'>Login</span></p>
       </Form>
     </div>
   )
 }
+
 export default Register

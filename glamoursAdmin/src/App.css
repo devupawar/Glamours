@@ -78,5 +78,44 @@
   }
   .sinfo{
     margin-top: 30px;
+     
+  }
+  .customers{
+    height: 260px;
+    width: 360px;
+    background-color: rgb(16, 229, 211);
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+  
+  }
+  .appointments{
+    height: 260px;
+    width: 360px;
+    background-color: rgb(16, 229, 211);
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  .counters{
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .services{
+    height: 260px;
+    width: 360px;
+    background-color: rgb(16, 229, 211);
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  h5{
+    color: white;
    
   }
+  span{
+    position: relative;
+    left:200px;
+    top:50px;
+  }
+  

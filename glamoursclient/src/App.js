@@ -10,11 +10,12 @@ import Profile from './Profile';
 import Register from './Register';
 import Login from './Login';
 
+
 function App() {
   return (
     <div>
       <>
-    <BrowserRouter>
+        <BrowserRouter>
     <Navrouter/>
     <Routes>
       <Route path='/home' element={<Home/>}></Route>
@@ -25,7 +26,8 @@ function App() {
       <Route path='/login' element={<Login/>}></Route>
     </Routes>
     </BrowserRouter>
-    </>
+        
+      </>
     </div>
   );
 }
