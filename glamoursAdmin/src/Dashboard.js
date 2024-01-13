@@ -1,8 +1,9 @@
 import React from 'react'
 
 const Dashboard = () => {
+  const[custcount]
   return (
-    <div>Dashboard</div>
+    <div></div>
   )
 }
 

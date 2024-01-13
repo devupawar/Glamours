@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import OwlCarousel from 'react-owl-carousel2';
 import 'react-owl-carousel2/lib/styles.css';
-import image1 from '../src/images/bg.jpg'
 import image2 from '../src/images/bg_1.png'
 import image3 from '../src/images/bg_2.png'
 import { Col, Container, Row } from 'react-bootstrap';
