@@ -1,7 +1,7 @@
 .Nav{
     cursor: pointer;
     height: 100px;
-    background-color: rgb(251, 128, 148);
+    background-color: rgb(247, 177, 188);
 }
 .mlink{
     text-decoration: none;
@@ -113,9 +113,31 @@
     color: white;
    
   }
-  /* span{
-    position: relative;
-    left:200px;
-    top:50px;
-  } */
+  .count-container{
+    display: flex;
+    justify-content: space-around;
+  }
+  .countcard{
+    height: 200px;
+    width: 300px;
+    
+    border-radius: 20px;
+    background-color: rgb(139, 29, 242);
+    margin-top: 30px;
+  }
+ .count{
+    margin-left: 30px;
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
   
+  }
+  .count-title{
+  margin-left: 30px;
+  color: white;
+  font-weight:600;
+  font-size: 1.5rem;
+  }
+  
+ 

@@ -21,7 +21,7 @@ const Dashboard = () => {
       
     });
 
-    axios.get('http://localhost:5000/api/AppointmentCount')
+    axios.get('http://localhost:5000/api/getAppointmentCount')
     .then((result) => {
       setserviceCount(result.data.count)
     }).catch((err) => {
@@ -29,12 +29,28 @@ const Dashboard = () => {
     });
   })
   return (
-    <div>
-     <h1> {custcount}</h1>
-     <h2>{serviceCount}</h2>
+    <div className='count-container'>
+
+    <div className='countcard'>
+    <p className='count'> {custcount} </p>
+    <p className='count-title'>Customers</p>
+
     </div>
 
+   <div className='countcard' >
+     <p className='count'>{AppointmentCount}</p>
+     <p className='count-title'>Appointments</p>
+
+   </div>
+
+   <div className='countcard'>
+   <p className='count'>  {serviceCount}</p>
+   <p className='count-title'>services</p>
+
+   </div>
     
+</div>
+  
   )
 }
 
