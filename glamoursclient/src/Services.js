@@ -1,8 +1,12 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Container, Form, Modal, Row } from 'react-bootstrap'
+import { useParams } from 'react-router-dom'
+
 
 const Services = () => {
+  const { servicetype } = useParams()
+
   const [serviceData, setServiceData] = useState([])
   const [isShow, setIsShow] = useState(false)
   const [appointmentDate, setAppointmentDate] = useState("")
@@ -29,19 +33,33 @@ const Services = () => {
       });
   }
   useEffect(() => {
-    axios.get('http://localhost:5000/api/getallservices')
-      .then((serviceData) => {
-        console.table(serviceData.data)
-        setServiceData(serviceData.data)
-      }).catch((err) => {
-        console.log(err)
-      });
+    if (!servicetype) {
+      axios.get('http://localhost:5000/api/getallservices')
+        .then((serviceData) => {
+          console.table(serviceData.data)
+          setServiceData(serviceData.data)
+        }).catch((err) => {
+          console.log(err)
+        });
+    } else {
+      const data = {
+        servicetype: servicetype
+      }
+      axios.post('http://localhost:5000/api/serviceByType', data)
+        .then((serviceData) => {
+          console.table(serviceData.data)
+          setServiceData(serviceData.data)
+        }).catch((err) => {
+          console.log(err)
+        });
+    }
+
   })
 
   return (
     <div>
       <Container>
-      <h1 className='shead'>Services</h1>
+        <h1 className='shead'>Services</h1>
         <Row>
           {
             serviceData.map((service) => {

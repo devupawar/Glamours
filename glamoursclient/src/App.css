@@ -1,11 +1,17 @@
 .Navbar {
   height: 100px;
   font-size: 20px;
-  background-color: rgb(249, 124, 145);
+  background-color: rgb(255, 236, 239);
   cursor: pointer;
 }
 
+.routes:hover{
+  transform: scale(1.2);
+  color:pink
+}
+
 .routes {
+  transition: transform 1.2;
   text-decoration: none;
   color: black;
 }
@@ -122,4 +128,15 @@ p {
 .fadeIn {
   opacity: 1;
   transition: opacity 1s ease-in-out; /* Adjust the timing function and duration as needed */
+}
+.scard{
+  margin-top: 50px;
+  border: 2px solid black !important;
+}
+.simg{
+
+  object-fit: cover;
+  margin-top: 10px;
+  height: 300px;
+  width: 300px;
 }

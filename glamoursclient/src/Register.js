@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { Button, Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap'
+import { useNavigate } from 'react-router-dom'
 
 const Register = () => {
    const[fullname,setfullName]=useState("")
@@ -8,6 +9,8 @@ const Register = () => {
    const[mobile,setmobile]=useState("")
    const[address,setaddress]=useState("")
    const[password,setPassword]=useState("")
+
+   const navi = useNavigate()
 
    function submitForm(){
       const customerdata={
@@ -52,7 +55,8 @@ const Register = () => {
         <FormLabel>Password</FormLabel>
         <FormControl onChange={(e)=>setPassword(e.target.value)} placeholder='********' type='password'></FormControl>
       </FormGroup>
-      <Button onClick={()=>submitForm()} className='bt'>Submit</Button>
+      <Button onClick={()=>submitForm()} className='bt'>Submit</Button><br></br>
+      <span>Already Register?<p onClick={() => navi('/login')}>login</p></span>
       </Form>
     </div>
   )

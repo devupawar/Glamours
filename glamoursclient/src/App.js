@@ -16,17 +16,19 @@ function App() {
     <div>
       <>
         <BrowserRouter>
-    <Navrouter/>
-    <Routes>
-      <Route path='/home' element={<Home/>}></Route>
-      <Route path='/service' element={<Services/>}></Route>
-      <Route path='/appointment' element={<Appointment/>}></Route>
-      <Route path='/profile' element={<Profile/>}></Route>
-      <Route path='/register' element={<Register/>}></Route>
-      <Route path='/login' element={<Login/>}></Route>
-    </Routes>
-    </BrowserRouter>
-        
+          <Navrouter />
+          <Routes>
+            <Route path='/home' element={<Home />}></Route>
+            <Route path='/service' element={<Services />}></Route>
+            <Route path='/service/:servicetype' element={<Services />}></Route>
+
+            <Route path='/appointment' element={<Appointment />}></Route>
+            <Route path='/profile' element={<Profile />}></Route>
+            <Route path='/register' element={<Register />}></Route>
+            <Route path='/login' element={<Login />}></Route>
+          </Routes>
+        </BrowserRouter>
+
       </>
     </div>
   );
