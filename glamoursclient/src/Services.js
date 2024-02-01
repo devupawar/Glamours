@@ -92,12 +92,12 @@ const Services = () => {
         </Modal.Header>
         <Modal.Body>
           <Form>
-            <Form.Control type="date" onChange={(e) => setAppointmentDate(e.target.value)}></Form.Control>
-            <Form.Control type="time" onChange={(e) => setAppointmentTime(e.target.value)}></Form.Control>
+            <Form.Control  type="date" onChange={(e) => setAppointmentDate(e.target.value)}></Form.Control>
+            <Form.Control className='apptime' type="time" onChange={(e) => setAppointmentTime(e.target.value)}></Form.Control>
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button className='btn' onClick={() => makeappointment()}>Take Appointment</Button>
+          <Button className='bt' onClick={() => makeappointment()}>Take Appointment</Button>
         </Modal.Footer>
       </Modal>
     </div>

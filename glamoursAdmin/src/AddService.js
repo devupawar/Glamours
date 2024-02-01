@@ -74,9 +74,9 @@ const AddService = () => {
                             <FormGroup className='formg'>
                                 <FormLabel>Service Type</FormLabel>
                                 <Form.Select onChange={(e) => setServiceType(e.target.value)}>
+                                    <option value="Makeups">Makeups</option>
                                     <option value="Haircut">HairCut</option>
                                     <option value="Facial">Facial</option>
-                                    <option value="Makeups">Makeups</option>
                                     <option value="Bleach">Bleach</option>
                                     <option value="waxing">waxing</option>
                                     <option value="CleanUp">CleanUp</option>

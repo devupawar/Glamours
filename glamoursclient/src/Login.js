@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import { login } from './ReduxWork/UserSlice';
 import { useDispatch } from 'react-redux';
 
-
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -46,8 +45,10 @@ const Login = () => {
           <FormLabel>Password</FormLabel>
           <FormControl type='password' onChange={(e) => setPassword(e.target.value)} placeholder='*********'></FormControl>
         </FormGroup>
+
         <Button onClick={handleLogin} className='bt'>Login</Button>
-        <span onClick={() => navi('/register')}>register</span>
+        <p>Don't have an Account? <span onClick={() => navi('/register')}>register</span>
+</p>
       </Form>
     </div>
   )

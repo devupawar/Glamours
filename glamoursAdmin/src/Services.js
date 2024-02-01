@@ -89,7 +89,7 @@ const Services = () => {
         <Modal.Body>
           <Form>
             <Form.Control type="text" value={selectedServices.ServiceName}></Form.Control>
-            <Form.Control type="text" value={selectedServices.ServicePrice}
+            <Form.Control className='spriceup' type="text" value={selectedServices.ServicePrice}
             onChange={(e)=>setSelectedServices
             ({...selectedServices,ServicePrice:e.target.value})}>
             </Form.Control>

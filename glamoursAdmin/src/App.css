@@ -121,7 +121,7 @@
     height: 200px;
     width: 300px;   
     border-radius: 20px;
-    background-color: rgb(139, 29, 242);
+    background-color: rgb(124, 9, 200);
     margin-top: 30px;
   }
  .count{
@@ -138,5 +138,11 @@
   font-weight:600;
   font-size: 1.5rem;
   }
-  
- 
+  .icons{
+  font-size: 3rem;
+  margin-left: 30px;
+  margin-top: -10px;
+  }
+  .spriceup{
+    margin-top: 10px;
+  }

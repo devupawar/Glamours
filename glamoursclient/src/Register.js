@@ -56,7 +56,7 @@ const Register = () => {
         <FormControl onChange={(e)=>setPassword(e.target.value)} placeholder='********' type='password'></FormControl>
       </FormGroup>
       <Button onClick={()=>submitForm()} className='bt'>Submit</Button><br></br>
-      <span>Already Register?<p onClick={() => navi('/login')}>login</p></span>
+      <p>Already Register? <span onClick={() => navi('/login')}>login</span></p>
       </Form>
     </div>
   )

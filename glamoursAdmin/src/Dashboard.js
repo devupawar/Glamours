@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-
+import { FaUsers } from "react-icons/fa";
+import { MdMiscellaneousServices } from "react-icons/md";
 const Dashboard = () => {
   const[custcount,setcustcount]=useState(0)
   const[AppointmentCount,setAppointmentCount]=useState(0)
@@ -16,14 +17,14 @@ const Dashboard = () => {
 
     axios.get('http://localhost:5000/api/getservicecount')
     .then((result) => {
-      setAppointmentCount(result.data.count)
+      setserviceCount(result.data.count)
     }).catch((err) => {
       
     });
 
     axios.get('http://localhost:5000/api/getAppointmentCount')
     .then((result) => {
-      setserviceCount(result.data.count)
+      setAppointmentCount(result.data.count)
     }).catch((err) => {
       
     });
@@ -34,7 +35,7 @@ const Dashboard = () => {
     <div className='countcard'>
     <p className='count'> {custcount} </p>
     <p className='count-title'>Customers</p>
-
+    <p className='icons'><FaUsers /></p>
     </div>
 
    <div className='countcard' >
@@ -46,7 +47,7 @@ const Dashboard = () => {
    <div className='countcard'>
    <p className='count'>  {serviceCount}</p>
    <p className='count-title'>services</p>
-
+   <p className='icons'><MdMiscellaneousServices /></p>
    </div>
     
 </div>
