@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Container, Form, Modal, Row} from 'react-bootstrap'
+import '../src/customers.css'
 
 const Customers = () => {
   const[customerData,setcustomerData]=useState([])

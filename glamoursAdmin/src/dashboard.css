@@ -1,0 +1,34 @@
+.count-container{
+    display: flex;
+    justify-content: space-around;
+  }
+  .countcard{
+    height: 200px;
+    width: 300px;   
+    border-radius: 20px;
+    background-color: rgb(124, 9, 200);
+    margin-top: 30px;
+  }
+ .count{
+    margin-left: 30px;
+    margin-top: 20px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+  
+  }
+  .count-title{
+  margin-left: 30px;
+  color: white;
+  font-weight:600;
+  font-size: 1.5rem;
+  }
+  .icons{
+  font-size: 3rem;
+  margin-left: 30px;
+  margin-top: -10px;
+  }
+  .counters{
+    display: flex;
+    justify-content: space-evenly;
+  }

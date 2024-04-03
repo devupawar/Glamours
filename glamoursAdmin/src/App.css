@@ -10,139 +10,14 @@
 .offhead{
     font-size: 30px;
 }
-.form{
-    margin-left: 100px;
-    margin-top: 50px;
-    margin-right: 150px;
-    border: 1px solid rgb(255, 0, 115);
-    border-radius: 20px ;
-  }
-  .formg{
-    margin-right: 20px;
-    margin-top: 10px;
-    margin-left: 20px;
-  }
-  .bt{
-   border-color:rgb(255, 0, 115) !important ;
-    background-color: rgb(255, 0, 115) !important;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  .btn{
-    border-color: rgb(255, 0, 115) !important;
-      background-color: rgb(255, 0, 115) !important;
-      margin-left: 90px;  
-     
-    }
-  
-  .asimg{
-    margin-top: 50px;
-    margin-left: 100px;
-    width: 650px;
-    height: 480px;
-  }
-  .shead{
-    margin-left: 600px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: rgb(120, 6, 120);
-    font-family: icomoon !important;
-  }
-  .chead{
-    margin-left: 600px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: rgb(120, 6, 120);
-    font-family: icomoon !important;
-  }
-  .custominfo{
-    margin-top: 30px;
-  }
-  .AShead{
-    margin-left: 600px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    color: rgb(120, 6, 120);
-    font-family: icomoon !important;
-  }
   .lh{
-    
     height: 100px;
     fill:yellow;
     stroke: blue;
   }
-  .cImg{
-    width: 100%;
-    height:200px;
-    object-fit: contain;
-  }
-  .sinfo{
-    margin-top: 30px;
-     
-  }
-  .customers{
-    height: 260px;
-    width: 360px;
-    background-color: rgb(16, 229, 211);
-    border-radius: 30px;
-    margin-left: 50px;
-    margin-top: 50px;
   
-  }
-  .appointments{
-    height: 260px;
-    width: 360px;
-    background-color: rgb(16, 229, 211);
-    border-radius: 30px;
-    margin-left: 50px;
-    margin-top: 50px;
-  }
-  .counters{
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .services{
-    height: 260px;
-    width: 360px;
-    background-color: rgb(16, 229, 211);
-    border-radius: 30px;
-    margin-left: 50px;
-    margin-top: 50px;
-  }
   h5{
     color: white;
    
   }
-  .count-container{
-    display: flex;
-    justify-content: space-around;
-  }
-  .countcard{
-    height: 200px;
-    width: 300px;   
-    border-radius: 20px;
-    background-color: rgb(124, 9, 200);
-    margin-top: 30px;
-  }
- .count{
-    margin-left: 30px;
-    margin-top: 20px;
-    color: white;
-    font-weight: 600;
-    font-size: 1.5rem;
   
-  }
-  .count-title{
-  margin-left: 30px;
-  color: white;
-  font-weight:600;
-  font-size: 1.5rem;
-  }
-  .icons{
-  font-size: 3rem;
-  margin-left: 30px;
-  margin-top: -10px;
-  }
-  .spriceup{
-    margin-top: 10px;
-  }

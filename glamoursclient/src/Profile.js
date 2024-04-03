@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
 import { logout } from './ReduxWork/UserSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import '../src/profile.css'
 
 const Profile = () => {
     const navi = useNavigate()
@@ -24,7 +25,7 @@ const Profile = () => {
                     navi('/login')
                 }} className='pbt'>Logout</Button>
             </div>
-            <h1>{UserData.CustomerName}</h1>
+         
         </div>
     )
 

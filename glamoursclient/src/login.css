@@ -1,0 +1,68 @@
+.baground {
+  background: rgb(238, 174, 234);
+  background: radial-gradient(circle, rgba(238, 174, 234, 1) 17%, rgba(148, 187, 233, 1) 100%);
+}
+
+.login-container {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  height: 100vh; 
+  width: 50%;
+  margin-left: 400px;
+  margin-top: -90px;
+}
+
+.image-container {
+  flex: 1;
+  margin-right:-5%;
+   /* Adjust the margin as needed */
+  
+}
+
+.fhead {
+  font-family: Century;
+  font-weight: 500;
+  margin-top: 10px;
+  color: rgb(255, 3, 116);
+  margin-left: 130px;
+}
+
+.lform {
+  background-color: rgb(252, 171, 185);
+  border: 1px solid rgb(253, 7, 118);
+  border-radius: 20px;
+  height: 400px;
+  flex: 1;
+  display: flex;
+  overflow: hidden; 
+   
+}
+
+.formg {
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+
+.form-content {
+  flex: 1;
+  padding: 20px; /* Add padding for better spacing */
+  
+}
+
+.lbt {
+  background-color: rgb(255, 3, 116);
+  border-color:rgb(255, 3, 116); 
+  padding: 10px;
+  width: 80px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+  margin-top: 10px;
+  margin-left:140px;
+  transition: transform 1;
+}
+.lbt:hover{
+  transform: scale(1.1);
+  background-color: rgb(139, 190, 247);
+}

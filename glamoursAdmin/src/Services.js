@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Container, Form, Modal, Row } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
-
+import '../src/Services.css'
 
 const Services = () => {
   const[serviceData,setServiceData]=useState([])
@@ -59,15 +59,18 @@ const Services = () => {
          {
           serviceData.map((service)=>{
             return(             
-              <Col lg='3' md="6" sm="12">              
+              <Col lg='4' md="4" sm="12">              
                 <Card className='sinfo'>   
-                  <Card.Img className='cImg' src={`http://localhost:5000${service.ServiceImage}`}/>
+                  <Card.Img className='Simg' src={`http://localhost:5000${service.ServiceImage}`}/>
                   <Card.Title>{service.ServiceName}</Card.Title>
                   <Card.Body>
-                    <p>{service.ServicePrice}</p>
-                    <p>{service.ServiceType}</p>
-                    <p>{service.IsActive}</p>
-                  </Card.Body>
+                  <h4 className="service-heading">Service Price :</h4>
+                  <p className="service-info">{service.ServicePrice}</p>
+                  <h4 className="service-heading">Service Type :</h4>
+                  <p className="service-info">{service.ServiceType}</p>
+                  <h4 className="service-heading">Service Available :</h4>
+                  <p className="service-info">{service.IsActive}</p> 
+                 </Card.Body>                
                   <Card.Footer>
                     <Button onClick={()=>DeleteService(service._id)}>Delete</Button>
                     <Button className='m-2' onClick={()=>{

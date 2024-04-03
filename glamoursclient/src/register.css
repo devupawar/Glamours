@@ -1,0 +1,50 @@
+/* register.css */
+
+.register-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.register-form-container {
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+}
+
+.register-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.register-form-container .form-group {
+  margin-bottom: 20px;
+}
+
+.register-form-container .register-button {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+}
+
+.already-registered-text {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.already-registered-text span {
+  color: blue;
+  cursor: pointer;
+}
+
+.already-registered-text span:hover {
+  text-decoration: underline;
+}
+.register-button {
+  margin: 0 auto; /* Center horizontally */
+  display: block;
+  margin-top: 20px; /* Ensure it takes the full width */
+}

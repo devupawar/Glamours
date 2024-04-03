@@ -1,0 +1,56 @@
+/* Footer.css */
+.footer {
+  background-color: #fc5a5a; /* Dark background color */
+  color: #fff; /* Text color */
+  padding: 50px 0 20px; /* Top padding reduced to 20px */
+  height: 400px;
+}
+
+.footerh4 {
+  color: #fff; /* Header text color */
+  margin-left: 50px;
+  font-size: 1.8rem;
+  margin-bottom: 20px; /* Added margin bottom */
+}
+
+.footer p {
+  color: #e3d1d1; 
+  margin-bottom: 10px; 
+}
+
+.footer ul {
+  list-style: none; /* Remove bullet points from list */
+  padding: 0;
+  margin: 0; /* Removed default margin */
+}
+
+.footer ul li {
+  margin-bottom: 5px; /* Reduced margin bottom */
+}
+
+.footer ul li a {
+  color: #ccc; /* Link text color */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.footer ul li a:hover {
+  color: #fff; /* Change link color on hover */
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-bottom {
+  background-color: #222; /* Darker background color for bottom section */
+  color: #ccc; /* Text color for bottom section */
+  text-align: center;
+  position: absolute;
+  margin-top: 100px;
+  padding: 10px;
+  width: 100%;
+}
+
+.aboutus-ft{
+  margin-left: -200px;
+}

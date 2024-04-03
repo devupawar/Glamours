@@ -2,6 +2,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { FaUsers } from "react-icons/fa";
 import { MdMiscellaneousServices } from "react-icons/md";
+import '../src/dashboard.css'
+
 const Dashboard = () => {
   const[custcount,setcustcount]=useState(0)
   const[AppointmentCount,setAppointmentCount]=useState(0)

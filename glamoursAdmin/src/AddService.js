@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Button, Col, Form, FormControl, FormGroup, FormLabel, Row } from 'react-bootstrap'
 import Serviceimage from '../src/front-desk.png'
 import { useNavigate } from 'react-router-dom'
-
+import '../src/Addservice.css'
 
 const AddService = () => {
     const [servicename, setServiceName] = useState("")
@@ -54,9 +54,9 @@ const AddService = () => {
             <container>
                 <h1 className='AShead'>Add Service</h1>
 
-                <Row>
+                <Row >
                     <Col lg="6" md="6" sm="12">
-                        <img className='asimg' src={Serviceimage}></img>
+                        <img className='asimg img-fluid' src={Serviceimage}></img>
                     </Col>
                     <Col lg="6" md="6" sm="12" >
                         <Form className='form'>
@@ -74,6 +74,7 @@ const AddService = () => {
                             <FormGroup className='formg'>
                                 <FormLabel>Service Type</FormLabel>
                                 <Form.Select onChange={(e) => setServiceType(e.target.value)}>
+                                    <option value=""></option>
                                     <option value="Makeups">Makeups</option>
                                     <option value="Haircut">HairCut</option>
                                     <option value="Facial">Facial</option>

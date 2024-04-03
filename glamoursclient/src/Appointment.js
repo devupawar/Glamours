@@ -1,22 +1,21 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Col, Container,Row } from 'react-bootstrap'
+import { Button, Card, Col, Container, Row } from 'react-bootstrap'
+import { useSelector } from 'react-redux'
+import './Appointment.css'
 
 const Appointment = () => {
-  const [appointmentData, setAppointmentData] = useState([
-    {
-      ServiceId: {
-        ServiceName:"",
-        ServiceType:""
-      }
-    }
-  ])
- 
+  const { UserData } = useSelector((state) => state.user)
+  const [appointmentData, setAppointmentData] = useState([])
+
   useEffect(() => {
-    axios.get('http://localhost:5000/api/getAllappointments')
-      .then((appointmentData) => {
-        console.table(appointmentData.data)
-        setAppointmentData(appointmentData.data)
+    const data = {
+      CustomerId: UserData._id
+    }
+    axios.post('http://localhost:5000/api/getAppointmentById', data)
+      .then((result) => {
+        console.log("DATA", result.data)
+        setAppointmentData(result.data)
       }).catch((err) => {
         console.log(err)
       });
@@ -27,32 +26,33 @@ const Appointment = () => {
       {
         aid: appid
       }).then((result) => {
-        alert("user deleted")
-        window.location.reload(false)
+        alert("Appointment deleted")
+        // Filter out the deleted appointment from appointmentData
+        setAppointmentData(appointmentData.filter(appointment => appointment._id !== appid))
       }).catch((err) => {
 
       });
   }
- 
+
   return (
     <div>
-      <h1>Appointments</h1>
+      <h1 className='Ahead'>Appointments</h1>
       <Container>
         <Row>
           {
             appointmentData.map((appointment) => {
               return (
-                <Col lg="4" md="6" sm="12">
+                <Col lg="4" md="6" sm="12" key={appointment._id}> {/* Add key prop */}
                   <Card>
                     <Card.Body>
-                      <p>{appointment.AppointmentDate}</p>
-                      <p>{appointment.AppointmentTime}</p>
-                      <p>{appointment.AppointmentStatus}</p>
-                      <p>{appointment.ServiceId.ServiceName}</p> 
-                      <p>{appointment.ServiceId.ServiceType}</p>                               </Card.Body>
+                      <p>Appointment Date : {appointment.AppointmentDate}</p>
+                      <p>Appointment Time : {appointment.AppointmentTime}</p>
+                      <p>Appointment Status : {appointment.AppointmentStatus}</p>
+                      <p>Service Name : {appointment.ServiceId.ServiceName}</p>
+                      <p>Service Type : {appointment.ServiceId.ServiceType}</p>
+                    </Card.Body>
                     <Card.Footer>
-                     <Button onClick={() => deleteAppointment(appointment._id)} className='bt m-2'>Cancel</Button>
-                      
+                      <Button onClick={() => deleteAppointment(appointment._id)} className='cancel-button'>Cancel</Button>
                     </Card.Footer>
                   </Card>
                 </Col>
@@ -60,8 +60,9 @@ const Appointment = () => {
             })
           }
         </Row>
-      </Container>  
+      </Container>
     </div>
   )
 }
+
 export default Appointment

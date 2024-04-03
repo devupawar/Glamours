@@ -1,0 +1,48 @@
+/* styles.css */
+
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
+  .cancel-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .cancel-button:hover {
+    background-color: #45a049;
+  }
+  .Ahead {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: rgb(120, 6, 120);
+    font-family: icomoon !important;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow:  2px 2px 8px rgba(40, 24, 50, 0.5);
+  }

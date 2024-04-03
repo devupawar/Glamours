@@ -58,7 +58,7 @@ const Appointment = () => {
   }
   return (
     <div>
-     <h1>Appointments</h1>
+     <h1 className='appointments'>Appointments</h1>
      <Container>
       <Row>
         {

@@ -1,0 +1,19 @@
+.chead{
+    margin-left: 600px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: rgb(120, 6, 120);
+    font-family: icomoon !important;
+  }
+  .custominfo{
+    margin-top: 30px;
+  }
+  .customers{
+    height: 260px;
+    width: 360px;
+    background-color: rgb(16, 229, 211);
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-top: 50px;
+  
+  }

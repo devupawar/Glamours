@@ -1,65 +1,101 @@
-import axios from 'axios'
-import React, { useState } from 'react'
-import { Button, Form, FormControl, FormGroup, FormLabel } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
+import React, { useState } from 'react';
+import { Button, Form, FormGroup, FormLabel, Container, Row, Col } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
+import '../src/register.css';
 
 const Register = () => {
-   const[fullname,setfullName]=useState("")
-   const[email,setemail]=useState("")
-   const[mobile,setmobile]=useState("")
-   const[address,setaddress]=useState("")
-   const[password,setPassword]=useState("")
+  const [fullname, setFullName] = useState('');
+  const [email, setEmail] = useState('');
+  const [mobile, setMobile] = useState('');
+  const [address, setAddress] = useState('');
+  const [password, setPassword] = useState('');
 
-   const navi = useNavigate()
+  const navigate = useNavigate();
 
-   function submitForm(){
-      const customerdata={
-      CustomerName:fullname,
-      CustomerEmail:email,
-      CustomerMobile:mobile,
-      CustomerAddress:address,
-      CustomerPassword:password
-    }
-    PostData(customerdata)
-   }
-   const PostData=(customerdata)=>{
-    axios.post("http://localhost:5000/api/addcustomer",customerdata)
-    .then((result) => {
-      alert("Customer Saved")
-    }).catch((err) => {
-      alert('err')
-    });
-   }
-     return (
-    <div>
+  const submitForm = () => {
+    const customerData = {
+      CustomerName: fullname,
+      CustomerEmail: email,
+      CustomerMobile: mobile,
+      CustomerAddress: address,
+      CustomerPassword: password
+    };
+    postData(customerData);
+  };
 
-      <Form className='form'>
-        <h1 className='fhead'>Sign In</h1>
-      <FormGroup className='formg'>
-        <FormLabel >Enter Your Name</FormLabel>
-        <FormControl onChange={(e)=>setfullName(e.target.value)} type='text' placeholder='Enter full name'></FormControl>
-      </FormGroup>
-      <FormGroup className='formg'>
-        <FormLabel>Email</FormLabel>
-        <FormControl onChange={(e)=>setemail(e.target.value)} type='email' placeholder='abc@gmail.com'></FormControl>
-      </FormGroup>
-      <FormGroup className='formg'>
-        <FormLabel>Mobile Number</FormLabel>
-        <FormControl onChange={(e)=>setmobile(e.target.value)} type='number' placeholder='0987646467'></FormControl>
-      </FormGroup>
-      <FormGroup className='formg'>
-        <FormLabel>Address</FormLabel>
-        <FormControl onChange={(e)=>setaddress(e.target.value)} type='text' placeholder='eg.build no,street,city'></FormControl>
-      </FormGroup>
-      <FormGroup className='formg'>
-        <FormLabel>Password</FormLabel>
-        <FormControl onChange={(e)=>setPassword(e.target.value)} placeholder='********' type='password'></FormControl>
-      </FormGroup>
-      <Button onClick={()=>submitForm()} className='bt'>Submit</Button><br></br>
-      <p>Already Register? <span onClick={() => navi('/login')}>login</span></p>
-      </Form>
-    </div>
-  )
-}
+  const postData = (customerData) => {
+    axios.post("http://localhost:5000/api/addcustomer", customerData)
+      .then((result) => {
+        alert("Customer Saved");
+      })
+      .catch((err) => {
+        alert('Error');
+      });
+  };
 
-export default Register
+  return (
+    <>
+      { <Container fluid className='register-container'>
+        <Row className='justify-content-center'>
+          <Col md={6} className='register-form-container'>
+            <h1 className='register-header'>Sign Up</h1>
+            <Form>
+              <FormGroup>
+                <FormLabel>Full Name</FormLabel>
+                <Form.Control
+                  type='text'
+                  placeholder='Enter full name'
+                  value={fullname}
+                  onChange={(e) => setFullName(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup>
+                <FormLabel>Email</FormLabel>
+                <Form.Control
+                  type='email'
+                  placeholder='abc@gmail.com'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup>
+                <FormLabel>Mobile Number</FormLabel>
+                <Form.Control
+                  type='tel'
+                  placeholder='0987646467'
+                  value={mobile}
+                  onChange={(e) => setMobile(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup>
+                <FormLabel>Address</FormLabel>
+                <Form.Control
+                  type='text'
+                  placeholder='e.g. Building no, Street, City'
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                />
+              </FormGroup>
+              <FormGroup>
+                <FormLabel>Password</FormLabel>
+                <Form.Control
+                  type='password'
+                  placeholder='********'
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </FormGroup>
+              <Button variant='primary' onClick={() => submitForm()} className='register-button'>Submit</Button>
+            </Form>
+            <p className='already-registered-text'>
+              Already Registered? <span onClick={() => navigate('/login')}>Login</span>
+            </p>
+          </Col>
+        </Row>
+      </Container > }
+    </>
+  );
+};
+
+export default Register;
